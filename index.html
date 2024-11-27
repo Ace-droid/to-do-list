@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   <script src="https://kit.fontawesome.com/3900767157.js" crossorigin="anonymous"></script>
+   <title>Document</title>
+<script defer src="main.js"></script></head>
+<body>
+
+
+   <div class="container">
+    <div class="top">
+      <div class="logo">
+        <i class="fa-solid fa-calendar-days"></i>
+        <h1>TA<span class="danger">SKS</span></h1>
+      </div>
+      <button class="hamburger">
+        <div class="bar"></div>
+      </button>
+    </div>
+
+
+      <aside>
+           <div class="side-bar">
+             <button class="all btn"><i class="fa-solid fa-folder"></i>All</button>
+             <button class="today btn"><i class="fa-solid fa-calendar-day"></i>Today</button>
+             <button class="tomorrow btn"><i class="fa-solid fa-calendar-week"></i>Tomorrow</button>
+             <button class="completed btn"><i class="fa-solid fa-calendar-check"></i>Completed</button>
+             
+             <button class="add-task add-btn">Task <i class="fa-solid fa-plus"></i></button>
+             <div class="project-container">
+                <p class="projects">Projects</p>
+                <button class="add-project-btn add-btn">Project <i class="fa-solid fa-plus"></i></button>
+                <div class="new-projects"></div>
+              </div>
+           </div>
+        </aside>
+
+
+      <dialog class="dialog">
+         <form class="form" method="dialog">
+           <div class="flex">
+             <label for="title">Title:</label>
+            <input type="text" name="title" id="title">
+            
+           </div>
+           <div>
+             <input type="date" name="date" id="date">
+             <select name="priority" required id="priority">
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+            <select name="select-project" id="select-project">
+            </select>
+           </div>
+           <div class="btn2-container">
+             <button type="submit" class="submit-btn btn2">Submit</button>
+             <button  class="cancel-btn btn2">Cancel</button>
+           </div>
+         </form>
+       </dialog>
+
+
+       <dialog class="edit-dialog">
+         <form class="form" method="dialog">
+           <div class="flex">
+             <label for="edit-title">Title:</label>
+            <input type="text" name="title" id="edit-title">
+            <input type="text" hidden name="title" id="id">
+           </div>
+           <div>
+             <input type="date" name="edit-date" id="edit-date">
+             <select name="edit-priority" required id="edit-priority">
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+            <select name="edit-select-project" id="edit-select-project">
+            </select>
+           </div>
+           <div class="btn2-container">
+             <button type="button" class="edit-submit-btn btn2">update</button>
+             <button  class="edit-cancel-btn btn2">Cancel</button>
+           </div>
+         </form>
+       </dialog>
+
+
+
+       <dialog class="project-dialog">
+         <form action="">
+            <label for="project-name">Project Name:</label>
+            <input type="text" name="project-name" id="project-name">
+            <div class="btn2-container">
+               <button type="submit" class="submit-project btn2">Submit</button>
+               <button type="button"  class="cancel-project btn2">Cancel</button>
+             </div>
+         </form>
+       </dialog>
+
+       <dialog class="edited-project-dialog">
+        <form action="">
+           <label for="edit-project-name">Project Name:</label>
+           <input type="text" name="edit-project-name" id="edit-project-name"> 
+           <input type="text" name="id" hidden id="project-id">
+           <div class="btn2-container">
+              <button type="submit" class="edit-submit-project btn2">Submit</button>
+              <button type="button"  class="edit-cancel-project btn2">Cancel</button>
+            </div>
+        </form>
+      </dialog>
+       
+       <div class="todos-container"></div>
+   </div>
+</body>
+</html>
